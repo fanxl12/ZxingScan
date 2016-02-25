@@ -1,6 +1,6 @@
 # ZxingScan
-A Android library, you can scan the code bar code and two-dimensional code.
-一个Android Library, 集成进去可以实现一维码和二维码的扫码
+A Android library, you can scan the code bar code and two-dimensional code.  
+一个Android Library, 集成进去可以实现一维码和二维码的扫码  
 项目集成：
 在项目的build.gradle文件中添加如下配置
 repositories {

@@ -5,9 +5,9 @@ A Android library, you can scan the code bar code and two-dimensional code.
 
 ## 效果图
 
-<img src="Images\zxing_01.jpg" width="800px"/>
+<img src="Images\zxing_01.jpg" width="480px"/>
 
-<img src="Images\zxing_02.jpg" width="800px"/>
+<img src="Images\zxing_02.jpg" width="480px"/>
 
 
 ## 项目集成：

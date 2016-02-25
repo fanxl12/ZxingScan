@@ -25,7 +25,7 @@ public class MainActivity extends AppCompatActivity {
 
     public void scan(View view){
         Intent scan = new Intent(this, CaptureActivity.class);
-        startActivityForResult(scan, 0);
+        startActivityForResult(scan, 100);
     }
 
     @Override

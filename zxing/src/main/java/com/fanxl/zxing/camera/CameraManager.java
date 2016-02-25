@@ -192,8 +192,7 @@ public class CameraManager {
 	}
 
 	/**
-	 * 获取相机分辨率
-	 * 
+	 *
 	 * @return
 	 */
 	public Point getCameraResolution() {

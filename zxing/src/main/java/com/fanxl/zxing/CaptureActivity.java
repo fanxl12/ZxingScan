@@ -24,15 +24,6 @@ import com.google.zxing.Result;
 import java.io.IOException;
 import java.lang.reflect.Field;
 
-/**
- * This activity opens the camera and does the actual scanning on a background
- * thread. It draws a viewfinder to help the user place the barcode correctly,
- * shows feedback as the image processing is happening, and then overlays the
- * results when a scan is successful.
- * 
- * @author dswitkin@google.com (Daniel Switkin)
- * @author Sean Owen
- */
 public final class CaptureActivity extends Activity implements SurfaceHolder.Callback {
 
 	private static final String TAG = CaptureActivity.class.getSimpleName();
@@ -210,8 +201,8 @@ public final class CaptureActivity extends Activity implements SurfaceHolder.Cal
 		// camera error
 		AlertDialog.Builder builder = new AlertDialog.Builder(this);
 		builder.setTitle(getString(R.string.app_name));
-		builder.setMessage("相机发生错误，确定退出吗?");
-		builder.setPositiveButton("确定", new DialogInterface.OnClickListener() {
+		builder.setMessage("Camera has a error, is it exit?");
+		builder.setPositiveButton("ok", new DialogInterface.OnClickListener() {
 
 			@Override
 			public void onClick(DialogInterface dialog, int which) {

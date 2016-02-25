@@ -1,5 +1,29 @@
 apply plugin: 'com.android.library'
 
+ext {
+    bintrayRepo = 'maven'
+    bintrayName = 'zxing'
+
+    publishedGroupId = 'com.fanxl'
+    libraryName = 'zxing'
+    artifact = 'zxing'
+
+    libraryDescription = 'A Android library, you can scan the code bar code and two-dimensional code.'
+
+    siteUrl = 'https://github.com/fanxl12/ZxingScan'
+    gitUrl = 'https://github.com/fanxl12/ZxingScan.git'
+
+    libraryVersion = '1.0.0'
+
+    developerId = 'fanxl12'
+    developerName = 'Fan XiaoLe'
+    developerEmail = '1964645988@qq.com'
+
+    licenseName = 'The Apache Software License, Version 2.0'
+    licenseUrl = 'http://www.apache.org/licenses/LICENSE-2.0.txt'
+    allLicenses = ["Apache-2.0"]
+}
+
 android {
     compileSdkVersion 23
     buildToolsVersion "23.0.2"
@@ -24,3 +48,6 @@ dependencies {
     compile 'com.android.support:appcompat-v7:23.1.1'
     compile files('libs/zxing.jar')
 }
+
+apply from: 'https://raw.githubusercontent.com/nuuneoi/JCenter/master/installv1.gradle'
+apply from: 'https://raw.githubusercontent.com/nuuneoi/JCenter/master/bintrayv1.gradle'

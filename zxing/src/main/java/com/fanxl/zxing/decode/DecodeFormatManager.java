@@ -16,20 +16,18 @@
 
 package com.fanxl.zxing.decode;
 
+import com.google.zxing.BarcodeFormat;
+
 import java.util.Collection;
 import java.util.EnumSet;
 import java.util.Set;
 
-import com.google.zxing.BarcodeFormat;
-
 public class DecodeFormatManager {
 
-	// 1D解码
 	private static final Set<BarcodeFormat> PRODUCT_FORMATS;
 	private static final Set<BarcodeFormat> INDUSTRIAL_FORMATS;
 	private static final Set<BarcodeFormat> ONE_D_FORMATS;
 
-	// 二维码解码
 	private static final Set<BarcodeFormat> QR_CODE_FORMATS;
 
 	static {

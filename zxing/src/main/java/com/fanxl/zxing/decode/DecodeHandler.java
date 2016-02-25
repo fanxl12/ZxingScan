@@ -82,14 +82,12 @@ public class DecodeHandler extends Handler {
 	private void decode(byte[] data, int width, int height) {
 		Size size = activity.getCameraManager().getPreviewSize();
 
-		// 杩欓噷闇�瑕佸皢鑾峰彇鐨刣ata缈昏浆涓�涓嬶紝鍥犱负鐩告満榛樿鎷跨殑鐨勬í灞忕殑鏁版嵁
 		byte[] rotatedData = new byte[data.length];
 		for (int y = 0; y < size.height; y++) {
 			for (int x = 0; x < size.width; x++)
 				rotatedData[x * size.height + size.height - y - 1] = data[x + y * size.width];
 		}
 
-		// 瀹介珮涔熻璋冩暣
 		int tmp = size.width;
 		size.width = size.height;
 		size.height = tmp;

@@ -23,9 +23,8 @@ public final class CameraConfigurationManager {
 
 	private final Context context;
 
-	// 屏幕分辨率
 	private Point screenResolution;
-	// 相机分辨率
+
 	private Point cameraResolution;
 
 	public CameraConfigurationManager(Context context) {
@@ -42,7 +41,6 @@ public final class CameraConfigurationManager {
 		screenResolution = theScreenResolution;
 		Log.i(TAG, "Screen resolution: " + screenResolution);
 
-		/** 因为换成了竖屏显示，所以不替换屏幕宽高得出的预览图是变形的 */
 		Point screenResolutionForCamera = new Point();
 		screenResolutionForCamera.x = screenResolution.x;
 		screenResolutionForCamera.y = screenResolution.y;
@@ -95,7 +93,6 @@ public final class CameraConfigurationManager {
 			cameraResolution.y = afterSize.height;
 		}
 
-		/** 设置相机预览为竖屏 */
 		camera.setDisplayOrientation(90);
 	}
 
@@ -108,8 +105,7 @@ public final class CameraConfigurationManager {
 	}
 
 	/**
-	 * 从相机支持的分辨率中计算出最适合的预览界面尺寸
-	 * 
+	 *
 	 * @param parameters
 	 * @param screenResolution
 	 * @return

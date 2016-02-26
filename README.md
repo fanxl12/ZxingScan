@@ -11,13 +11,16 @@ A Android library, you can scan the code bar code and two-dimensional code.
 
 * Android Studio
 
-在项目的build.gradle文件中添加如下配置
+将[zxing](zxing)引入
+
 ```xml
-repositories {
-    maven { url "https://dl.bintray.com/fanxl12/maven/" }
+dependencies {
+    compile project(':zxing')
 }
 ```
-然后加入
+
+也可以直接在项目的build.gradle文件中添加如下配置
+
 ```
 dependencies {
     compile 'com.fanxl:zxing:1.0.0'
@@ -51,7 +54,6 @@ protected void onActivityResult(int requestCode, int resultCode, Intent data) {
 
 最后不要忘记，需要在工程的AndroidManifest.xml中添加权限和声明：
 ```xml
-<activity android:name="com.fanxl.zxing.CaptureActivity">
-</activity>
+<activity android:name="com.fanxl.zxing.CaptureActivity" />
 ```
 

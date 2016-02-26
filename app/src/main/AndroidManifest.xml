@@ -15,9 +15,7 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-        <activity android:name="com.fanxl.zxing.CaptureActivity">
-
-        </activity>
+        <activity android:name="com.fanxl.zxing.CaptureActivity" />
     </application>
 
 </manifest>

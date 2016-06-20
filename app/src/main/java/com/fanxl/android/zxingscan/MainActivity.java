@@ -8,6 +8,7 @@ import android.widget.TextView;
 import android.widget.Toast;
 
 import com.fanxl.zxing.CaptureActivity;
+import com.fanxl.zxing.FlashCaptureActivity;
 
 public class MainActivity extends AppCompatActivity {
 
@@ -23,8 +24,13 @@ public class MainActivity extends AppCompatActivity {
         main_scan_result = (TextView)findViewById(R.id.main_scan_result);
     }
 
-    public void scan(View view){
+    public void scan1(View view){
         Intent scan = new Intent(this, CaptureActivity.class);
+        startActivityForResult(scan, 100);
+    }
+
+    public void scan2(View view){
+        Intent scan = new Intent(this, FlashCaptureActivity.class);
         startActivityForResult(scan, 100);
     }
 

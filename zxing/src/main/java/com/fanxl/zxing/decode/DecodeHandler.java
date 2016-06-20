@@ -24,8 +24,8 @@ import android.os.Handler;
 import android.os.Looper;
 import android.os.Message;
 
-import com.fanxl.zxing.CaptureActivity;
 import com.fanxl.zxing.CaptureActivityHandler;
+import com.fanxl.zxing.CaptureInter;
 import com.google.zxing.BinaryBitmap;
 import com.google.zxing.DecodeHintType;
 import com.google.zxing.MultiFormatReader;
@@ -39,13 +39,13 @@ import java.util.Map;
 
 public class DecodeHandler extends Handler {
 
-	private final CaptureActivity activity;
+	private final CaptureInter activity;
 	private final MultiFormatReader multiFormatReader;
 	private boolean running = true;
 	public static final int DECODE = 106;
 	public static final int QUIT = 107;
 
-	public DecodeHandler(CaptureActivity activity, Map<DecodeHintType, Object> hints) {
+	public DecodeHandler(CaptureInter activity, Map<DecodeHintType, Object> hints) {
 		multiFormatReader = new MultiFormatReader();
 		multiFormatReader.setHints(hints);
 		this.activity = activity;

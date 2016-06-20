@@ -24,11 +24,14 @@ import java.util.Set;
 
 public class DecodeFormatManager {
 
-	private static final Set<BarcodeFormat> PRODUCT_FORMATS;
-	private static final Set<BarcodeFormat> INDUSTRIAL_FORMATS;
-	private static final Set<BarcodeFormat> ONE_D_FORMATS;
+	static final Set<BarcodeFormat> PRODUCT_FORMATS;
+	static final Set<BarcodeFormat> INDUSTRIAL_FORMATS;
+	static final Set<BarcodeFormat> ONE_D_FORMATS;
 
-	private static final Set<BarcodeFormat> QR_CODE_FORMATS;
+	static final Set<BarcodeFormat> QR_CODE_FORMATS;
+
+	static final Collection<BarcodeFormat> DATA_MATRIX_FORMATS = EnumSet
+			.of(BarcodeFormat.DATA_MATRIX);
 
 	static {
 		PRODUCT_FORMATS = EnumSet.of(BarcodeFormat.UPC_A, BarcodeFormat.UPC_E, BarcodeFormat.EAN_13, BarcodeFormat.EAN_8, BarcodeFormat.RSS_14, BarcodeFormat.RSS_EXPANDED);

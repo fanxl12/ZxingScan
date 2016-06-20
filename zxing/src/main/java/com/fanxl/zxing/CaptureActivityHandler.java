@@ -35,7 +35,7 @@ import com.google.zxing.Result;
  */
 public class CaptureActivityHandler extends Handler {
 
-	private final CaptureActivity activity;
+	private final CaptureInter activity;
 	private final DecodeThread decodeThread;
 	private final CameraManager cameraManager;
 	private State state;
@@ -48,7 +48,7 @@ public class CaptureActivityHandler extends Handler {
 		PREVIEW, SUCCESS, DONE
 	}
 
-	public CaptureActivityHandler(CaptureActivity activity, CameraManager cameraManager, int decodeMode) {
+	public CaptureActivityHandler(CaptureInter activity, CameraManager cameraManager, int decodeMode) {
 		this.activity = activity;
 		decodeThread = new DecodeThread(activity, decodeMode);
 		decodeThread.start();

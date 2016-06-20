@@ -16,6 +16,7 @@
             </intent-filter>
         </activity>
         <activity android:name="com.fanxl.zxing.CaptureActivity" />
+        <activity android:name="com.fanxl.zxing.FlashCaptureActivity" />
     </application>
 
 </manifest>
